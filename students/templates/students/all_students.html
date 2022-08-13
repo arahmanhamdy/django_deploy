@@ -1,0 +1,11 @@
+<div>
+    List of Students:
+<ul>
+
+        {% for student in object_list %}
+        <li><a href="{% url 'detail_student' student.id %}">{{student.name}}</a></li>
+        {% endfor %}
+</ul>
+</div>
+
+<a href="{% url 'create_student' %}"> Add New Student</a>
